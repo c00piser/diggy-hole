@@ -1,5 +1,7 @@
 /* Base class for all game entities,
- * implemented as a common JS module 
+ * implemented as a common JS module
+ * Authors:
+ * - Nathan Bean 
  */
 module.exports = (function(){
   
@@ -48,7 +50,7 @@ module.exports = (function(){
     *   do with it.
     */
    Entity.prototype.collide = function(otherEntity) {
-   }
+   } 
    
    /* BoundingBox function
     * This function returns an axis-aligned bounding
@@ -58,6 +60,16 @@ module.exports = (function(){
     */
    Entity.prototype.boundingBox = function() {
      // Return a bounding box for your entity
+   }
+   
+   /* BoundingCircle function
+    * This function returns a bounding circle, i.e.
+    * {cx: 0, cy: 0, radius: 20}
+    * the circle should contain your entity or at 
+    * least the part that can be collided with.
+    */
+   Entity.prototype.boundingCircle = function() {
+     // Return a bounding circle for your entity
    }
    
    return Entity;
